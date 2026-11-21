@@ -35,6 +35,7 @@ Evaluated strictly out-of-fold across all 5 stratified folds (`2,456` clips):
 | **CMAFNet (Ours — 5-Fold OOF Ensemble)** | **0.3805** | 0.1307 | 0.2556 |
 
 - Test submission generates predictions across `594` held-out clips (`submission.json` / `submission.zip`) using the top-K checkpoints across folds and variants.
+- **IEEE FG 2026 BlEmoRe Public Leaderboard:** Team `Emotional-Intelligence` ranked **9th** (`ACC_presence = 0.323`, `ACC_salience = 0.180`, `Avg = 0.251`), outperforming official baselines HiCMAE (`0.2240`), VideoMAEv2+HuBERT (`0.2230`), and ImageBind+WavLM (`0.2205`).
 
 ## Files
 

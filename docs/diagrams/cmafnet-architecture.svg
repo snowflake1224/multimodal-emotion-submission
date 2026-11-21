@@ -22,12 +22,12 @@
   </defs>
 
   <rect width="1120" height="580" fill="url(#bg)"/>
-  <text x="34" y="40" class="t">BlEmoRe @ IEEE FG 2026  CMAFNet Cross-Modal Attentive Fusion</text>
-  <text x="34" y="60" class="s">First-Author Shared-Task Manuscript · 8,448-d Audio/Visual Tokens · 21 Blended Emotion Combos + 3 Salience Tiers · 5-Fold True OOF Ensemble</text>
+  <text x="34" y="40" class="t">BlEmoRe @ IEEE FG 2026 &#8212; CMAFNet Cross-Modal Attentive Fusion</text>
+  <text x="34" y="60" class="s">First-Author Shared-Task Manuscript &#183; 8,448-d Audio/Visual Tokens &#183; 21 Blended Emotion Combos + 3 Salience Tiers &#183; 5-Fold True OOF Ensemble</text>
 
   <!-- Row 1: Modalities -->
   <rect x="34" y="84" width="1052" height="134" class="zone"/>
-  <text x="50" y="106" class="zl">1. Temporal Modality Pooling (Mean + Max over Frame Axis · 2,456 Train / 594 Test Clips)</text>
+  <text x="50" y="106" class="zl">1. Temporal Modality Pooling (Mean + Max over Frame Axis &#183; 2,456 Train / 594 Test Clips)</text>
   <rect x="52" y="122" width="240" height="78" class="box"/>
   <text x="68" y="146" class="bt">VideoMAEv2</text>
   <text x="68" y="166" class="bs">2,816-d spatiotemporal feats</text>
@@ -71,11 +71,11 @@
 
   <!-- Row 3: 5-fold True OOF Benchmarks -->
   <rect x="34" y="418" width="1052" height="136" class="zone"/>
-  <text x="50" y="440" class="zl">3. True Out-of-Fold 5-Fold Cross-Validation Results (n = 2,456 · 54% Blended Clips)</text>
+  <text x="50" y="440" class="zl">3. True Out-of-Fold 5-Fold Cross-Validation Results (n = 2,456 &#183; 54% Blended Clips)</text>
   <rect x="52" y="458" width="1016" height="78" class="box-ok"/>
   <text x="72" y="484" class="bs" fill="#34d399">CMAFNet 5-Fold OOF Ensemble:  ACC_presence = 0.3805  |  ACC_salience = 0.1307  |  Avg = 0.2556</text>
-  <text x="72" y="505" class="bs">Baselines:  ImageBind+WavLM (pres 0.345)  ·  VideoMAEv2+HuBERT (pres 0.332)  ·  HiCMAE (pres 0.298)  ·  Trivial (0.077)</text>
-  <text x="72" y="524" class="bs">-&gt; Exceeds strongest reported presence baseline (ImageBind+WavLM 0.345) by +3.55 percentage points across true OOF folds.</text>
+  <text x="72" y="505" class="bs">Baselines:  ImageBind+WavLM (pres 0.345)  &#183;  VideoMAEv2+HuBERT (pres 0.332)  &#183;  HiCMAE (pres 0.298)  &#183;  Trivial (0.077)</text>
+  <text x="72" y="524" class="bs">IEEE FG 2026 Leaderboard: 9th (0.323 pres / 0.180 sal / 0.251 Avg) above HiCMAE (0.2240) &amp; VideoMAEv2+HuBERT (0.2230).</text>
 
   <path d="M 172 200 L 172 282" class="e"/>
   <path d="M 430 200 L 250 282" class="e"/>
