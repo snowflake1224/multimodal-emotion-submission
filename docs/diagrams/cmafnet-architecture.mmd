@@ -1,0 +1,29 @@
+flowchart LR
+    subgraph Input["Pre-Extracted Temporal Modalities (8,448-d Mean+Max Pooled)"]
+        VM["VideoMAEv2 (2816-d)"]
+        VS["VideoSwinTransformer (1536-d)"]
+        WL["WavLM-large (2048-d)"]
+        HB["HuBERT-large (2048-d)"]
+    end
+
+    subgraph CMAF["CMAFNet Cross-Modal Attentive Fusion (blemore_cmaf_v2.ipynb)"]
+        PROJ["Per-Modality Linear + LayerNorm Projections -> Token Embeddings"]
+        CLS["Learnable [CLS] Token Concat"]
+        TX["Transformer Self-Attention Encoder Layers"]
+        POOL["Attention Pooling over Modality Tokens + [CLS] Fusion"]
+    end
+
+    subgraph Heads["Multi-Task Heads (Focal CE gamma=2 + Mixup + SWA + 5-Fold CV)"]
+        H1["21-Class Emotion Combo Head (6 Single + 15 Blended Pairs)"]
+        H2["3-Class Salience Head (70/30 · 50/50 · 30/70)"]
+    end
+
+    VM --> PROJ
+    VS --> PROJ
+    WL --> PROJ
+    HB --> PROJ
+    PROJ --> CLS
+    CLS --> TX
+    TX --> POOL
+    POOL --> H1
+    POOL --> H2
